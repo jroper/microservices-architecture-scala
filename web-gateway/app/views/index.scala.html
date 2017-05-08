@@ -3,8 +3,8 @@
 
 @()(implicit nav: Nav)
 
-@main("Index") {
-    <h1>Index</h1>
+@main(Messages("lagomAuction")) {
+    <h1>@Messages("lagomAuction")</h1>
 
     @for(user <- nav.user) {
         <a href="@routes.ProfileController.myItems(ItemStatus.Created.toString.toLowerCase(Locale.ENGLISH), None, None)">
